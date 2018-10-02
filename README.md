@@ -29,6 +29,8 @@ While the pre-trained model is provided under default settings for our CE-ESI-MS
 ### Input data format
 *Trace* calls on both the centroid and profile MS data to reduce data processing time. Export and convert the MS1 spectra from each raw (primary) MS data file into the open-access `.mzML` file format in both centroid and profile mode. 
 
+High-resolution MS data from our study is available at the NIH Common Fund's Metabolomics Data Repository and Coordinating Center (supported by NIH grant, U01-DK097430) website, [the Metabolomics Workbench](http://www.metabolomicsworkbench.org), with Project ID PR000686. The data can be accessed directly via [Project DOI:10.21228/M80Q2W](http://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Project&ProjectID=PR000686)
+
 ## Usage
 ### Signal Detection from MS Data 
 To process your MS data for signal detection (with all parameters and inputs by default), simply run the main code by:
