@@ -13,7 +13,7 @@ Recent developments in high-resolution mass spectrometry (MS) technology enabled
 ## Setup
 
 ### Environment
-*Trace* is implemented in Python with `TensorFlow`. For large MS data, we recommend 32+ GB RAM for fast data processing and sufficient data storage capacity. A graphics processing unit (GPU) is recommended (but not required) to speed up the initial training of the model.
+*Trace* is implemented in Python with `TensorFlow`. For large MS data, we recommend 32+ GB RAM for fast data processing and sufficient data storage capacity. GPU is recommended (but not required) for speeding up the initial training of the model.
 
 To run *Trace*, following software/libraries should be installed:
 
