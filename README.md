@@ -12,7 +12,8 @@ Recent developments in high-resolution mass spectrometry (MS) technology enabled
 
 ## Setup
 
-**Environment**: *Trace* is implemented in Python with `TensorFlow`. For large MS data, we recommend 32+ GB RAM for fast data processing and sufficient data storage capacity. A graphics processing unit (GPU) is recommended (but not required) to speed up the initial training of the model.
+### Environment
+*Trace* is implemented in Python with `TensorFlow`. For large MS data, we recommend 32+ GB RAM for fast data processing and sufficient data storage capacity. A graphics processing unit (GPU) is recommended (but not required) to speed up the initial training of the model.
 
 To run *Trace*, following software/libraries should be installed:
 
@@ -22,14 +23,13 @@ To run *Trace*, following software/libraries should be installed:
 
 Other libraries may also be required if not existent beforehand. For most of them, `pip install` would work. 
 
-**Pre-trained models**:
+### Pre-trained models
 While the pre-trained model is provided under default settings for our CE-ESI-MS data, users can also perform independent training for their customized datasets with the code provided. The details of training the model is discussed below.
 
 **Input data format**:
 *Trace* calls on both the centroid and profile MS data to reduce data processing time. Export and convert the MS1 spectra from each raw (primary) MS data file into the open-access `.mzML` file format in both centroid and profile mode. 
 
 ## Usage
-
 ### Signal Detection from MS Data 
 To process your MS data for signal detection (with all parameters and inputs by default), simply run the main code by:
 
