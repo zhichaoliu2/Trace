@@ -7,7 +7,7 @@ This repository contains the Python code for the manuscript
 
 
 Recent developments in high-resolution mass spectrometry (MS) technology enabled ultrasensitive detection of biomolecules even at the level of single cells. However, extraction of trace-abundance signals from complex MS datasets requires improved data and signal processing algorithms. To bridge this gap, we here developed *"Trace"*, a software package that incorporates machine learning (ML) to automate feature selection and optimization for the extraction of trace-level signals from MS data. The basic workflow is shown below:
-![workflow](doc/workflow.png | width=200)
+![](doc/workflow.png | width=200)
 
 
 ## Setup
@@ -41,7 +41,7 @@ To change parameters and input MS files, edit the `TRACE.py` file as needed acco
 After running the code, a folder called "`Results`" will be generated (if not existent) and the result files will be saved under that folder. Three files will be generated:
 
 
-| Output File &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
+| Output File &nbsp; &nbsp; &nbsp; &nbsp;  | Description |
 | ---- | --- |
 | `Initial_pks.txt` | Initial scanning signal list. Contains (m/z, retention time, intensity, peak area, SNR) for each signal. |
 | `Images_pks.txt` | Images of the potential signals by initial scaning(60x12 pixels for each image at each line by default). |
