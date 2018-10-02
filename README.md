@@ -18,7 +18,7 @@ Recent developments in high-resolution mass spectrometry (MS) technology enabled
 To run *Trace*, following software/libraries should be installed:
 
 - [Anaconda](https://www.anaconda.com/)
-- [TensorFlow](https://pytorch.org/)
+- [TensorFlow](https://www.tensorflow.org/)
 - [joblib](https://pypi.org/project/joblib/)
 
 Other libraries may also be required if not existent beforehand. For most of them, `pip install` would work. 
@@ -46,8 +46,8 @@ After running the code, a folder called "`Results`" will be generated (if not ex
 | Output File &nbsp; &nbsp; &nbsp; &nbsp;  | Description |
 | ---- | --- |
 | `Initial_pks.txt` | Initial scanning signal list. Contains (m/z, retention time, intensity, peak area, SNR) for each signal. |
-| `Images_pks.txt` | Images of the potential signals by initial scaning(60x12 pixels for each image at each line by default). |
-| `Final_pks.txt` | Final signal list. Contains (m/z, retention time, intensity, peak area, SNR) for each signal at each row. |
+| `Images_pks.txt` | Images of the potential signals by initial scaning (60x12=720 pixels for each image per row by default). |
+| `Final_pks.txt` | Final signal list. Contains (m/z, retention time, intensity, peak area, SNR) for each signal per row. |
 
 ### Train Your Own Model 
 While the pre-trained model is provided by default with our CE-ESI-MS data, users are advised to perform independent training for customized datasets, particularly if different types of experimental conditions or technologies were used to acquire the data. For this purpose, besides the python code provided (`Training_Model.py`), users need to prepare their own training data: both positive (true) and negative (false) signal sample images (`imgs-train.txt`) and their labels (`label-train.txt`). The image file should be in such a format that each line stands for a flatted signal image (rows connect to a single row in order). The label file should be in one column indicating whether (1) or not (0) the signal image stands for a true signal in the image file of corresponding row. For example, if N (>1000 recommended for better model performance) samples are collected and labeled, then the data size should be (`N x 720`) for image file and (`N x 1 `)for label file. To run the program, execute the `Training_Model.py` code by 
