@@ -7,7 +7,7 @@ This repository contains the Python code for the manuscript
 
 
 Recent developments in high-resolution mass spectrometry (MS) technology enabled ultrasensitive detection of biomolecules even at the level of single cells. However, extraction of trace-abundance signals from complex MS datasets requires improved data and signal processing algorithms. To bridge this gap, we here developed *"Trace"*, a software package that incorporates machine learning (ML) to automate feature selection and optimization for the extraction of trace-level signals from MS data. The basic workflow is shown below:
-![workflow](./Figures/Figure1-0926.pdf)
+![workflow](./doc/workflow.pdf)
 
 
 ## Setup
@@ -26,7 +26,7 @@ Other libraries may also be required if not existent beforehand. For most of the
 ### Pre-trained models
 While the pre-trained model is provided under default settings for our CE-ESI-MS data, users can also perform independent training for their customized datasets with the code provided. The details of training the model is discussed below.
 
-**Input data format**:
+### Input data format
 *Trace* calls on both the centroid and profile MS data to reduce data processing time. Export and convert the MS1 spectra from each raw (primary) MS data file into the open-access `.mzML` file format in both centroid and profile mode. 
 
 ## Usage
