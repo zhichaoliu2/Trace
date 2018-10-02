@@ -7,7 +7,7 @@ This repository contains the Python code for the manuscript
 
 
 Recent developments in high-resolution mass spectrometry (MS) technology enabled ultrasensitive detection of biomolecules even at the level of single cells. However, extraction of trace-abundance signals from complex MS datasets requires improved data and signal processing algorithms. To bridge this gap, we here developed *"Trace"*, a software package that incorporates machine learning (ML) to automate feature selection and optimization for the extraction of trace-level signals from MS data. The basic workflow is shown below:
-![](doc/workflow.png | width=200)
+![](doc/workflow.png)
 
 
 ## Setup
@@ -57,5 +57,6 @@ For more details about *Trace*, please go to the paper.
 
 ## Contact us
 If you have any questions or comments on *Trace*, please contact us: 
+
 <zhichaoliu@gwu.edu>; <chenz@gwu.edu>.
 
