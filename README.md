@@ -21,7 +21,7 @@ To run *Trace*, following software/libraries should be installed:
 - [TensorFlow](https://www.tensorflow.org/)
 - [joblib](https://pypi.org/project/joblib/)
 
-Other libraries may also be required if not existent beforehand. For most of them, `pip install` would work. 
+Other libraries may also be installed if not existent beforehand. For most of them, `pip install` would work. 
 
 ### Pre-trained models
 While the pre-trained model is provided under default settings for our CE-ESI-MS data, users can also perform independent training for their customized datasets with the code provided. The details of training the model is discussed below.
