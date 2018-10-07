@@ -27,7 +27,7 @@ Other libraries may also be installed if not existent beforehand. For most of th
 While the pre-trained model is provided under default settings for our CE-ESI-MS data, users can also perform independent training for their customized datasets with the code provided. The details of training the model is discussed below.
 
 ### Input data format
-*Trace* calls on both the centroid and profile MS data to reduce data processing time. Export and convert the MS1 spectra from each raw (primary) MS data file into the open-access `.mzML` file format in both centroid and profile mode. 
+*Trace* calls on both the centroid and profile MS data to reduce data processing time. Export and convert the MS1 spectra from each raw (primary) MS data file into the open-access `mzML` file format in both centroid and profile mode. 
 
 High-resolution MS data from our study is available at the NIH Common Fund's Metabolomics Data Repository and Coordinating Center website, [the Metabolomics Workbench](http://www.metabolomicsworkbench.org) with Project ID PR000686. The data can be accessed directly via [Project DOI:10.21228/M80Q2W](http://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Project&ProjectID=PR000686)
 
@@ -60,5 +60,5 @@ For more details about *Trace*, please go to the paper.
 ## Contact us
 If you have any questions or comments on *Trace*, please contact us: 
 
-<zhichaoliu@gwu.edu>; <chenz@gwu.edu>.
+<chenz@gwu.edu>; <nemes@umd.edu>; <zhichaoliu@gwu.edu>.
 
