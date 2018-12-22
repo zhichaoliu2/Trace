@@ -25,7 +25,9 @@ Other libraries may also be installed if not existent beforehand. For most of th
 
 ### Pre-trained models
 To use *Trace* for signal detection on MS data, a pre-trained model is needed. You can download the pre_trained models here: 
-- [pre-trained_models [90M]](https://drive.google.com/file/d/1Fc6XwA3wLIaa-3n-syBOAu-tiB_vbQRT/view?usp=sharing) 
+ 
+ - [pre-trained_models [90M]](https://drive.google.com/file/d/1Fc6XwA3wLIaa-3n-syBOAu-tiB_vbQRT/view?usp=sharing) 
+
 and put it under this directory.
 
 While the pre-trained model is provided under default settings for our CE-ESI-MS data, users can also perform independent training for their customized datasets with the code provided. The details of training the model is discussed below.
@@ -37,7 +39,7 @@ High-resolution MS data from our study is available at the NIH Common Fund's Met
 
 ## Usage
 ### Signal Detection from MS Data 
-To process your MS data for signal detection (with all parameters and inputs by default), simply run the main code by:
+To process your MS data for signal detection (with all parameters and inputs by default), make sure you already have the pre_trained models (either by downloading the models provided above or training you own model). Then simply run the main code by:
 
 ```
 python TRACE.py
