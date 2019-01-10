@@ -15,7 +15,6 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from sklearn.cluster import KMeans
 
-
 # Weight Initialization
 def weight_variable(shape, var_name):
     initial = tf.truncated_normal(shape, stddev=0.1)
@@ -36,27 +35,9 @@ def max_pool_2x2(x):
 ############ Deep Learning Training Process#########################
 def predict(imgs_raw, pk_list, RESULTS_PATH, K_means = None, PLOT_IMG = None):
 
-    images0 = np.loadtxt('imgs-train.txt')   ## N*m matrix, m = 40*20, stands for a flatted image
-
-    for i0 in images0:
-        i0 *= 255.0/i0.max()    ## Normalize the image to gray scale
-
-    mean_img = []
-    std_img = []
-
-    ## batch normalize the images pixel-wise
-    epsilon = 0.001
-    out_array=[]
-    for pixel in np.transpose(images0):
-        mean_v = np.mean(pixel)
-        std_v  = np.std(pixel)
-        tmp2 = [(k-mean_v)/(std_v+epsilon) for k in pixel]
-        
-        mean_img.append(mean_v)
-        std_img.append(std_v)
-        out_array.append(tmp2)
-
-    images = np.transpose(out_array)
+    images0 = np.loadtxt('Imgs_mean_std.txt')
+    mean_img = images0[0]
+    std_img = images0[1]
 
     pred_mat0 = np.copy(imgs_raw)
     for i0 in pred_mat0:
@@ -103,7 +84,6 @@ def predict(imgs_raw, pk_list, RESULTS_PATH, K_means = None, PLOT_IMG = None):
     # Readout Layer
     W_fc2 = weight_variable([256, 2],"W_fc2")
     b_fc2 = bias_variable([2])
-
     y_conv = tf.matmul(h_fc1_drop, W_fc2) + b_fc2
     ################### LeNet5 ################
 
@@ -115,7 +95,7 @@ def predict(imgs_raw, pk_list, RESULTS_PATH, K_means = None, PLOT_IMG = None):
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
     score_save = []
-    num_models = 3
+    num_models = 10
     for jj in range(num_models):
         
         sess = tf.InteractiveSession()
@@ -143,9 +123,7 @@ def predict(imgs_raw, pk_list, RESULTS_PATH, K_means = None, PLOT_IMG = None):
 
         score_save.append(sss)
         print ('Model ' + str(jj) + ' Predicted peaks: ', cc, ' from ', len(pk_list), 'target images' )
-
         sess.close()
-
 
     score_vote = np.mean(np.transpose(score_save), axis = 1)
     target_pks = []
@@ -202,8 +180,4 @@ def predict(imgs_raw, pk_list, RESULTS_PATH, K_means = None, PLOT_IMG = None):
     np.savetxt(f1, target_pks, fmt='%.3f',delimiter=' ')
 
     return target_pks
-
-
-
-
 
