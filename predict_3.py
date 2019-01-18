@@ -11,6 +11,8 @@ import numpy as np
 import sys
 import random
 
+import matplotlib
+matplotlib.use('Agg')  ## Avoid some problem when running on Windows or so..
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from sklearn.cluster import KMeans
@@ -164,7 +166,7 @@ def predict(imgs_raw, pk_list, RESULTS_PATH, K_means = None, PLOT_IMG = None):
         k_center = np.array(kmeans.cluster_centers_)
 
         rows = math.ceil(K_means/3.0)
-        plt.figure(1)
+        plt.figure()
         for j in range(K_means):
             plt.subplot(rows, 3, j+1)
             plt.imshow(np.reshape(k_center[j], (60, 12)), interpolation='bilinear', cmap='jet', aspect='auto')
