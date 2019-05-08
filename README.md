@@ -3,7 +3,7 @@
 ## Introduction
 
 This repository contains the Python code for the manuscript
-Liu, Z., et al. - [ Trace: Machine Learning of Signal Images for Trace-Sensitive Mass Spectrometry – A Case Study from Single-Cell Metabolomics.](https://pubs.acs.org/doi/10.1021/acs.analchem.8b05985) *Anal. Chem*.
+> Liu, Z., et al. - [ Trace: Machine Learning of Signal Images for Trace-Sensitive Mass Spectrometry – A Case Study from Single-Cell Metabolomics.](https://pubs.acs.org/doi/10.1021/acs.analchem.8b05985) *Anal. Chem*.
 
 
 Recent developments in high-resolution mass spectrometry (MS) technology enabled ultrasensitive detection of biomolecules even at the level of single cells. However, extraction of trace-abundance signals from complex MS datasets requires improved data and signal processing algorithms. To bridge this gap, we here developed *"Trace"*, a software package that incorporates machine learning (ML) to automate feature selection and optimization for the extraction of trace-level signals from MS data. The basic workflow is shown below:
